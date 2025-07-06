@@ -1,4 +1,3 @@
-
 function Homepage() {
   return (
     <div className="w-full min-h-screen bg-[#01010d] text-white font-[Inter] relative overflow-x-hidden">
@@ -317,7 +316,7 @@ function Homepage() {
             <div className="w-full max-w-[472px] min-h-[467px] h-auto bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[34px] flex flex-col justify-between box-border">
               <p className="text-white text-[18px] font-normal leading-[27px] mb-[20px] break-words flex-grow">
                 "A Hastydev entendeu exatamente o que a gente precisava e foi
-                muito ágil em entregar tudo funcionando. A automação com
+                muito ��gil em entregar tudo funcionando. A automação com
                 contratos inteligentes usando o DEPIX melhorou nossas conversões
                 e tirou várias travas operacionais que a gente tinha. Os
                 relatórios deixaram tudo mais claro para nossos parceiros e
@@ -419,22 +418,24 @@ function Homepage() {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-[#0e213a] pt-[69px] pb-[20px] mt-[100px] md:mt-[50px]">
+      <footer className="relative bg-[#0e213a] pt-[70px] pb-[40px] mt-[100px] md:mt-[50px] overflow-hidden">
+        {/* Footer Background Image */}
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/1eb06832d834ee8fce8a2ec639b899fa86237ede?width=3208"
           alt="Footer Background"
           className="absolute bottom-0 left-0 w-full h-[339px] object-cover -z-10"
         />
 
-        <div className="max-w-[1480px] mx-auto px-[94px] lg:px-[50px] md:px-[20px]">
-          <div className="grid grid-cols-[357px_339px_1fr] md:grid-cols-1 gap-[60px] md:gap-[40px] items-start md:text-center">
+        <div className="max-w-[1480px] mx-auto px-[94px] lg:px-[50px] md:px-[20px] relative z-10">
+          <div className="grid grid-cols-[357px_339px_1fr] lg:grid-cols-[1fr_1fr_auto] md:grid-cols-1 gap-[94px] lg:gap-[60px] md:gap-[40px] items-start">
+            {/* Left Column - Logo and Description */}
             <div className="footer-left">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
                 alt="HastyDev Footer Logo"
-                className="w-[174px] h-[28px] mb-[49px] md:mx-auto"
+                className="w-[174px] h-[28px] mb-[77px] md:mx-auto md:mb-[30px]"
               />
-              <p className="text-white text-[20px] font-normal leading-[32.004px] opacity-[0.5882]">
+              <p className="text-white text-[20px] font-normal leading-[32px] opacity-[0.59] md:text-center md:text-[16px] md:leading-[24px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
                 ipsum suspendisse ultrices gravida. Risus commodo viverra
@@ -442,34 +443,67 @@ function Homepage() {
               </p>
             </div>
 
+            {/* Center Column - Additional Content */}
             <div className="footer-center">
-              <p className="text-white text-[20px] font-normal leading-[30.6px] opacity-[0.5882]">
+              <p className="text-white text-[20px] font-normal leading-[30.6px] opacity-[0.59] md:text-center md:text-[16px] md:leading-[24px] mt-[105px] md:mt-[0px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                <br />
-                <br />
+                <br className="hidden lg:block" />
+                <br className="hidden lg:block" />
                 Do eiusmod tempor incididunt ut labore et dolore magna
-                <br />
-                <br />
+                <br className="hidden lg:block" />
+                <br className="hidden lg:block" />
                 Aliqua. Quis ipsum suspendisse ultrices gravida. Risus.
               </p>
             </div>
 
-            <div className="flex flex-col items-end md:items-center gap-[20px]">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/76ed3d53a0b95966cfb1f1e42efdbb7851216083?width=254"
-                alt="Footer Decoration"
-                className="w-[127px] h-[141px] opacity-[0.451]"
-              />
-              <div className="social-links">
+            {/* Right Column - Decoration and Social Links */}
+            <div className="footer-right flex flex-col items-end md:items-center lg:items-end justify-between min-h-[220px]">
+              {/* Decoration Image */}
+              <div className="decoration-image mb-[47px] lg:mb-[30px]">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/09757bce8bb504ee9662f299a25dcc07233142f0?width=386"
-                  alt="Social Media Links"
-                  className="w-[193px] h-[83px]"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/76ed3d53a0b95966cfb1f1e42efdbb7851216083?width=254"
+                  alt="Footer Decoration"
+                  className="w-[127px] h-[141px] opacity-[0.45] md:w-[100px] md:h-[110px]"
                 />
+              </div>
+
+              {/* Social Media Links */}
+              <div className="social-links flex gap-[20px] md:gap-[15px]">
+                <a
+                  href="http://instagram.com/hastydev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:opacity-70"
+                >
+                  <svg
+                    className="w-[30px] h-[30px] text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/hastydev/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all duration-300 hover:opacity-70"
+                >
+                  <svg
+                    className="w-[30px] h-[30px] text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Footer Bottom Overlay for better contrast */}
+        <div className="absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-[#0e213a] to-transparent -z-5"></div>
       </footer>
     </div>
   );
