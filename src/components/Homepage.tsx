@@ -530,23 +530,24 @@ function Homepage() {
                   className="w-[140px] sm:w-[160px] lg:w-[174px] h-auto mb-6 sm:mb-8 lg:mb-[77px] mx-auto lg:mx-0"
                 />
                 <p className="text-white text-sm sm:text-base lg:text-lg xl:text-[20px] font-normal leading-6 sm:leading-7 lg:leading-8 xl:leading-[32px] opacity-[0.59]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                  maecenas accumsan lacus vel facilisis.
+                  Especialistas em transformar ideias em realidade no universo
+                  Web3. Oferecemos soluções completas que integram tecnologia,
+                  jurídico e marketing para criar produtos escaláveis no
+                  ecossistema descentralizado. Sua jornada no mundo cripto
+                  começa aqui.
                 </p>
               </div>
 
               {/* Center Column - Additional Content */}
               <div className="footer-center text-center lg:text-left">
                 <p className="text-white text-sm sm:text-base lg:text-lg xl:text-[20px] font-normal leading-6 sm:leading-7 lg:leading-8 xl:leading-[30.6px] opacity-[0.59] mt-0 lg:mt-[105px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  Automação P2P com contratos inteligentes
                   <br className="hidden lg:block" />
                   <br className="hidden lg:block" />
-                  Do eiusmod tempor incididunt ut labore et dolore magna
+                  Incorporação em jurisdições estratégicas
                   <br className="hidden lg:block" />
                   <br className="hidden lg:block" />
-                  Aliqua. Quis ipsum suspendisse ultrices gravida. Risus.
+                  Networking ativo no mercado Web3
                 </p>
               </div>
 
