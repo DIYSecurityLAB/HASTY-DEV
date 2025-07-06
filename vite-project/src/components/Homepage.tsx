@@ -126,8 +126,8 @@ function Homepage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-1 gap-[78px] md:gap-[40px] items-start">
-            <div className="product-info">
+          <div className="flex flex-col lg:flex-row gap-[78px] md:gap-[40px] items-start">
+            <div className="product-info flex-1 lg:max-w-[529px] order-1 lg:order-1">
               <h3 className="text-white text-[34px] font-normal leading-normal mb-[43px]">
                 <span className="text-[#3d83bd]">HastyP2P</span> Core
               </h3>
@@ -156,11 +156,11 @@ function Homepage() {
                 para execução ágil e alinhada com seu escopo.
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:justify-end flex-1 order-2 lg:order-2">
               <img
-                src="/image/imagem-btc.png"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0d8eb7396fb9eccbf1b3ccc22239a60437c2f71?width=1392"
                 alt="HastyP2P Core"
-                className="w-[696px] h-[435px] md:w-full md:h-auto rounded-lg"
+                className="w-[696px] h-[435px] lg:w-[696px] lg:h-[435px] md:w-full md:h-auto rounded-lg object-cover"
               />
             </div>
           </div>
@@ -252,9 +252,9 @@ function Homepage() {
             <span className="text-white"> para todas as suas atividades</span>
           </h2>
 
-          <div className="grid grid-cols-[350px_1fr] md:grid-cols-1 gap-[63px] md:gap-[40px]">
-            <div className="flex flex-col gap-[39px] md:gap-[30px]">
-              <div className="w-[350px] md:w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
+          <div className="flex flex-col lg:flex-row gap-[63px] md:gap-[40px] items-start">
+            <div className="flex flex-col gap-[39px] md:gap-[30px] flex-shrink-0 lg:w-[350px] w-full order-1 lg:order-1">
+              <div className="w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
                 <h3 className="text-white text-[15px] font-normal leading-normal mb-[21px]">
                   Crie seus Cupons para Promoções
                 </h3>
@@ -265,7 +265,7 @@ function Homepage() {
                 </p>
               </div>
 
-              <div className="w-[350px] md:w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
+              <div className="w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
                 <h3 className="text-white text-[15px] font-normal leading-normal mb-[21px]">
                   Acompanhe o Desempenho em Tempo Real
                 </h3>
@@ -275,7 +275,7 @@ function Homepage() {
                 </p>
               </div>
 
-              <div className="w-[350px] md:w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
+              <div className="w-full h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-[30px] md:p-[20px]">
                 <h3 className="text-white text-[15px] font-normal leading-normal mb-[21px]">
                   Dashboard feito para o Lojista
                 </h3>
@@ -286,11 +286,11 @@ function Homepage() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="flex-1 flex justify-center lg:justify-start order-2 lg:order-2">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a69030946afd7b560cac8724174f48335150b71?width=1726"
                 alt="Dashboard Preview"
-                className="w-[863px] h-[557px] md:w-full md:h-auto rounded-lg"
+                className="w-full max-w-[863px] h-auto rounded-lg object-cover"
               />
             </div>
           </div>
