@@ -101,13 +101,13 @@ function Homepage() {
       </section>
 
       {/* Section 2 - Infinitas Possibilidades */}
-      <section className="py-[100px] md:py-[50px] px-[152px] lg:px-[50px] md:px-[20px]">
+      <section className="py-[120px] md:py-[80px] px-[152px] lg:px-[50px] md:px-[20px]">
         <div className="max-w-[1304px] mx-auto">
-          <h2 className="text-center text-[24px] font-normal leading-normal uppercase mb-[30px]">
+          <h2 className="text-center text-[24px] font-normal leading-normal uppercase mb-[48px] md:mb-[32px]">
             <span className="text-white">Infinitas </span>
             <span className="text-[#3d83bd]">possibilidades</span>
           </h2>
-          <h3 className="text-white text-center text-[33px] md:text-[24px] font-normal leading-normal mb-[184px] md:mb-[60px]">
+          <h3 className="text-white text-center text-[33px] md:text-[24px] font-normal leading-normal mb-[120px] md:mb-[60px]">
             Produtos para todas as suas necessidades
           </h3>
 
@@ -128,7 +128,7 @@ function Homepage() {
 
           <div className="flex flex-col lg:flex-row gap-[78px] md:gap-[40px] items-start">
             <div className="product-info flex-1 lg:max-w-[529px] order-1 lg:order-1">
-              <h3 className="text-white text-[34px] font-normal leading-normal mb-[43px]">
+              <h3 className="text-white text-[34px] font-normal leading-normal mb-[56px] md:mb-[40px]">
                 <span className="text-[#3d83bd]">HastyP2P</span> Core
               </h3>
               <div className="text-white text-[18px] font-normal leading-[26.9px]">
@@ -167,10 +167,13 @@ function Homepage() {
         </div>
       </section>
 
+      {/* Spacing between sections */}
+      <div className="h-[80px] md:h-[60px]"></div>
+
       {/* Section 3 - Por que a HastyDev */}
-      <section className="py-[100px] md:py-[50px] px-[152px] lg:px-[50px] md:px-[20px]">
+      <section className="py-[120px] md:py-[80px] px-[152px] lg:px-[50px] md:px-[20px]">
         <div className="max-w-[1304px] mx-auto">
-          <h2 className="text-center text-[33px] font-normal leading-normal mb-[83px] md:mb-[40px]">
+          <h2 className="text-center text-[33px] font-normal leading-normal !mb-[96px] md:!mb-[48px] !mt-[32px]">
             <span className="text-[#3d83bd]">Por que</span>
             <span className="text-white"> a HastyDev?</span>
           </h2>
@@ -185,7 +188,7 @@ function Homepage() {
                 />
               </div>
               <div className="content">
-                <h3 className="text-white text-[17px] font-normal leading-normal mb-[24px]">
+                <h3 className="text-white text-[17px] font-normal leading-normal mb-[32px] mt-[8px]">
                   Tecnologia de ponta a ponta para o universo Web3
                 </h3>
                 <p className="text-white text-[16px] font-normal leading-[24px]">
@@ -206,7 +209,7 @@ function Homepage() {
                 />
               </div>
               <div className="content">
-                <h3 className="text-white text-[17px] font-normal leading-normal mb-[24px]">
+                <h3 className="text-white text-[17px] font-normal leading-normal mb-[32px] mt-[8px]">
                   Velocidade de execução com precisão cirúrgica
                 </h3>
                 <p className="text-white text-[16px] font-normal leading-[24px]">
@@ -228,7 +231,7 @@ function Homepage() {
                 />
               </div>
               <div className="content">
-                <h3 className="text-white text-[17px] font-normal leading-normal mb-[24px]">
+                <h3 className="text-white text-[17px] font-normal leading-normal mb-[32px] mt-[8px]">
                   Conexão direta com o ecossistema cripto real
                 </h3>
                 <p className="text-white text-[16px] font-normal leading-[24px]">
@@ -244,10 +247,13 @@ function Homepage() {
         </div>
       </section>
 
+      {/* Spacing between sections */}
+      <div className="h-[80px] md:h-[60px]"></div>
+
       {/* Section 4 - Dashboard */}
-      <section className="py-[100px] md:py-[50px] px-[152px] lg:px-[50px] md:px-[20px]">
+      <section className="py-[120px] md:py-[80px] px-[152px] lg:px-[50px] md:px-[20px]">
         <div className="max-w-[1304px] mx-auto">
-          <h2 className="text-center text-[33px] font-normal leading-normal mb-[135px] md:mb-[40px]">
+          <h2 className="text-center text-[33px] font-normal leading-normal !mb-[80px] md:!mb-[48px] !mt-[32px]">
             <span className="text-[#316bb6]">Um painel</span>
             <span className="text-white"> para todas as suas atividades</span>
           </h2>
@@ -297,10 +303,13 @@ function Homepage() {
         </div>
       </section>
 
+      {/* Spacing between sections */}
+      <div className="h-[80px] md:h-[60px]"></div>
+
       {/* Section 5 - Testimonials */}
-      <section className="py-[100px] px-[51px]">
+      <section className="py-[120px] md:py-[80px] px-[51px]">
         <div className="max-w-[1480px] mx-auto">
-          <h2 className="text-center text-[33px] font-normal leading-normal mb-[84px]">
+          <h2 className="text-center text-[33px] font-normal leading-normal !mb-[96px] md:!mb-[48px] !mt-[32px]">
             <span className="text-[#3d83bd]">O que</span>
             <span className="text-white"> nossos usuários dizem sobre nós</span>
           </h2>
@@ -358,10 +367,13 @@ function Homepage() {
         </div>
       </section>
 
+      {/* Spacing between sections */}
+      <div className="h-[80px] md:h-[60px]"></div>
+
       {/* Section 6 - Clients */}
-      <section className="py-[100px] md:py-[50px] px-[154px] lg:px-[50px] md:px-[20px]">
+      <section className="py-[120px] md:py-[80px] px-[154px] lg:px-[50px] md:px-[20px]">
         <div className="max-w-[1304px] mx-auto">
-          <h2 className="text-center text-[33px] font-normal leading-normal mb-[70px] md:mb-[40px]">
+          <h2 className="text-center text-[33px] font-normal leading-normal !mb-[80px] md:!mb-[48px] !mt-[32px]">
             <span className="text-[#3d83bd]">Nossos </span>
             <span className="text-white">clientes</span>
           </h2>
