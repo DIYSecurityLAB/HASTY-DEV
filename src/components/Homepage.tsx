@@ -260,17 +260,17 @@ function Homepage() {
                 Produtos para todas as suas necessidades
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-[20px] xl:gap-[64px] mb-12 sm:mb-16 lg:mb-[106px] justify-items-center">
-                <div className="flex items-center justify-center w-full max-w-[280px] sm:max-w-none sm:w-full lg:w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-sm sm:text-lg lg:text-[24px] font-normal cursor-pointer transition-all duration-300 bg-[rgba(62,132,190,0.2)] px-4">
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 mb-12 sm:mb-16 lg:mb-[106px]">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 bg-[rgba(62,132,190,0.2)] px-3 sm:px-4">
                   HastyP2P Core
                 </div>
-                <div className="flex items-center justify-center w-full max-w-[280px] sm:max-w-none sm:w-full lg:w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-sm sm:text-lg lg:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-4">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
                   HastyPay Engine
                 </div>
-                <div className="flex items-center justify-center w-full max-w-[280px] sm:max-w-none sm:w-full lg:w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-sm sm:text-lg lg:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-4">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
                   HastyLegal Guide
                 </div>
-                <div className="flex items-center justify-center w-full max-w-[280px] sm:max-w-none sm:w-full lg:w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-sm sm:text-lg lg:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-4">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
                   HastyBrand Studio
                 </div>
               </div>
@@ -548,15 +548,15 @@ function Homepage() {
                 <span className="text-white">clientes</span>
               </h2>
 
-              <div className="w-full max-w-[1274px] mx-auto min-h-[80px] sm:min-h-[100px] lg:min-h-[109px] border-[2.778px] border-[#316bb6] rounded-xl flex items-center justify-center py-4 sm:py-5 lg:py-[3.364px] px-4 sm:px-6 lg:px-[10px]">
-                <div className="flex items-center gap-4 sm:gap-6 lg:gap-[30px] xl:gap-[60px] justify-center flex-wrap">
-                  <div className="flex items-center gap-2 lg:gap-[7.25px] flex-shrink-0">
+              <div className="w-full max-w-[1274px] mx-auto min-h-[80px] sm:min-h-[100px] lg:min-h-[109px] border-[2.778px] border-[#316bb6] rounded-xl flex items-center justify-center py-6 sm:py-8 lg:py-[12px] px-4 sm:px-6 lg:px-[15px]">
+                <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-[30px] justify-center flex-wrap">
+                  <div className="flex items-center gap-1 sm:gap-2 lg:gap-[7.25px] flex-shrink-0 min-w-0">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5f45aea6b870d278c06a1d1140376ff19c57097?width=70"
                       alt="Strategy Mars"
-                      className="w-6 sm:w-8 lg:w-[35px] h-6 sm:h-8 lg:h-[34px] mix-blend-luminosity"
+                      className="w-4 sm:w-5 md:w-6 lg:w-7 xl:w-[30px] 2xl:w-[35px] h-4 sm:h-5 md:h-6 lg:h-7 xl:h-[30px] 2xl:h-[34px] mix-blend-luminosity flex-shrink-0"
                     />
-                    <span className="text-white text-center font-[Cinzel] text-xs sm:text-sm lg:text-[15px] font-bold uppercase whitespace-nowrap">
+                    <span className="text-white text-center font-[Cinzel] text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-[14px] 2xl:text-[15px] font-bold uppercase">
                       Strategy Mars
                     </span>
                   </div>
@@ -564,25 +564,31 @@ function Homepage() {
                   <img
                     src="/image/2024024_Logo_HASTYDEV_Horizontal_Negativo.png"
                     alt="HastyDev Logo"
-                    className="h-auto max-h-6 sm:max-h-8 lg:max-h-[35px] brightness-0 invert flex-shrink-0"
+                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
                   />
 
                   <img
                     src="/image/Logo_Alfred_2025_negativo.png"
                     alt="Alfred Logo"
-                    className="h-auto max-h-6 sm:max-h-8 lg:max-h-[35px] brightness-0 invert flex-shrink-0"
+                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
+                  />
+
+                  <img
+                    src="/image/Vector Smart Object (2).png"
+                    alt="Vector Smart Object Logo"
+                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
                   />
 
                   <img
                     src="/image/Logo-diy-sec-lab.png"
                     alt="Diy Sec Lab Logo"
-                    className="h-auto max-h-6 sm:max-h-8 lg:max-h-[35px] brightness-0 invert flex-shrink-0"
+                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
                   />
 
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1468476f1b9f99fbcafec899491f7534a3768ad?width=246"
                     alt="PagueBit Logo"
-                    className="h-auto max-h-6 sm:max-h-8 lg:max-h-[35px] brightness-0 invert flex-shrink-0"
+                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
                   />
                 </div>
               </div>
