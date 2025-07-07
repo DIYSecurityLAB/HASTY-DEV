@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SEO from "./SEO";
+import ProductSection from "./ProductSection";
 
 function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -280,63 +281,7 @@ function Homepage() {
                 Produtos para todas as suas necessidades
               </h3>
 
-              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 mb-12 sm:mb-16 lg:mb-[106px]">
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
-                  HastyP2P Core
-                </div>
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
-                  HastyPay Engine
-                </div>
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
-                  HastyLegal Guide
-                </div>
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
-                  HastyBrand Studio
-                </div>
-              </div>
-
-              <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[78px] items-start">
-                <div className="product-info w-full lg:flex-1 lg:max-w-[529px] order-2 lg:order-1">
-                  <h3 className="text-white text-xl sm:text-2xl lg:text-[34px] font-normal leading-normal mb-6 sm:mb-8 lg:mb-[56px]">
-                    <span className="text-[#3d83bd]">HastyP2P</span> Core
-                  </h3>
-                  <div className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[26.9px] space-y-4">
-                    <div>
-                      <strong>Objetivo:</strong>
-                      <br />
-                      Automatize sua operação P2P com contratos inteligentes,
-                      eliminando intermediários e reduzindo riscos como MEs.
-                    </div>
-                    <div>
-                      <strong>Operação:</strong>
-                      <br />
-                      Solução white-label e modular, adaptável ao seu negócio,
-                      com liquidez, segurança e contratos inteligentes
-                      orquestrados.
-                    </div>
-                    <div>
-                      <strong>Desenvolvedor:</strong>
-                      <br />
-                      Time Web3 da Hastydev, especialista em automação cripto,
-                      integração com carteiras e backends seguros.
-                    </div>
-                    <div>
-                      <strong>Tempo:</strong>
-                      <br />
-                      Contagem regressiva, grupo colaborativo e rede de
-                      profissionais para execução ágil e alinhada com seu
-                      escopo.
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-center lg:justify-end w-full lg:flex-1 order-1 lg:order-2">
-                  <img
-                    src="image/imagem-btc.png"
-                    alt="HastyP2P Core"
-                    className="w-full max-w-[500px] lg:max-w-[696px] h-auto rounded-lg object-cover"
-                  />
-                </div>
-              </div>
+              <ProductSection />
             </div>
           </section>
 
