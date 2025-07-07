@@ -34,30 +34,57 @@ function Homepage() {
             <div className="flex items-center justify-between w-full h-14 lg:h-[60px]">
               {/* Logo */}
               <div className="logo-section">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
-                  alt="HastyDev Logo"
-                  className="h-6 lg:h-[26px] w-auto"
-                />
+                <a
+                  href="#top"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="cursor-pointer"
+                >
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
+                    alt="HastyDev Logo"
+                    className="h-6 lg:h-[26px] w-auto hover:opacity-80 transition-opacity duration-300"
+                  />
+                </a>
               </div>
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex gap-[135px] items-center">
                 <a
-                  href="#produto"
+                  href="#produtos"
                   className="text-white no-underline text-[15px] font-normal transition-colors duration-300 hover:text-[#316bb6]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("produtos")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Produto
                 </a>
                 <a
-                  href="#plataforma"
+                  href="#dashboard"
                   className="text-[#316bb6] no-underline text-[15px] font-normal transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("dashboard")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Plataforma
                 </a>
                 <a
                   href="#sobre"
                   className="text-white no-underline text-[15px] font-normal transition-colors duration-300 hover:text-[#316bb6]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("sobre")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Sobre
                 </a>
@@ -107,23 +134,41 @@ function Homepage() {
             >
               <nav className="flex flex-col gap-4 py-4 border-t border-white/10">
                 <a
-                  href="#produto"
+                  href="#produtos"
                   className="text-white no-underline text-sm font-normal transition-colors duration-300 hover:text-[#316bb6] py-2"
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("produtos")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    toggleMenu();
+                  }}
                 >
                   Produto
                 </a>
                 <a
-                  href="#plataforma"
+                  href="#dashboard"
                   className="text-[#316bb6] no-underline text-sm font-normal transition-colors duration-300 py-2"
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("dashboard")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    toggleMenu();
+                  }}
                 >
                   Plataforma
                 </a>
                 <a
                   href="#sobre"
                   className="text-white no-underline text-sm font-normal transition-colors duration-300 hover:text-[#316bb6] py-2"
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("sobre")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                    toggleMenu();
+                  }}
                 >
                   Sobre
                 </a>
@@ -178,6 +223,11 @@ function Homepage() {
             <button
               className="mt-4 sm:mt-6 lg:mt-8 bg-[#316bb6] hover:bg-[#2a5c9f] text-white border-0 rounded-md py-2 sm:py-3 lg:py-[12px] px-4 sm:px-6 lg:px-[24px] text-sm sm:text-base lg:text-[15px] font-normal cursor-pointer transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto shadow-lg"
               style={{ backgroundColor: "#316bb6" }}
+              onClick={() => {
+                document
+                  .getElementById("contato")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Entre em contato conosco
             </button>
@@ -185,7 +235,10 @@ function Homepage() {
         </section>
 
         {/* Section 2 - Infinitas Possibilidades */}
-        <section className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]">
+        <section
+          id="produtos"
+          className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]"
+        >
           <div className="max-w-[1304px] mx-auto">
             <h2 className="text-center text-lg sm:text-xl lg:text-[24px] font-normal leading-normal uppercase mb-8 sm:mb-10 lg:mb-[48px]">
               <span className="text-white">Infinitas </span>
@@ -257,7 +310,10 @@ function Homepage() {
         <div className="h-12 sm:h-16 lg:h-[80px]"></div>
 
         {/* Section 3 - Por que a HastyDev */}
-        <section className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]">
+        <section
+          id="sobre"
+          className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]"
+        >
           <div className="max-w-[1304px] mx-auto">
             <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[96px] mt-4 sm:mt-6 lg:mt-[32px]">
               <span className="text-[#3d83bd]">Por que</span>
@@ -338,7 +394,10 @@ function Homepage() {
         <div className="h-12 sm:h-16 lg:h-[80px]"></div>
 
         {/* Section 4 - Dashboard */}
-        <section className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]">
+        <section
+          id="dashboard"
+          className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]"
+        >
           <div className="max-w-[1304px] mx-auto">
             <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[80px] mt-4 sm:mt-6 lg:mt-[32px]">
               <span className="text-[#316bb6]">Um painel</span>
@@ -512,7 +571,10 @@ function Homepage() {
         </section>
 
         {/* Footer */}
-        <footer className="relative bg-[#0e213a] pt-12 sm:pt-16 lg:pt-[70px] pb-6 sm:pb-8 lg:pb-[40px] mt-16 sm:mt-20 lg:mt-[100px] overflow-hidden">
+        <footer
+          id="contato"
+          className="relative bg-[#0e213a] pt-12 sm:pt-16 lg:pt-[70px] pb-6 sm:pb-8 lg:pb-[40px] mt-16 sm:mt-20 lg:mt-[100px] overflow-hidden"
+        >
           {/* Footer Background Image */}
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1eb06832d834ee8fce8a2ec639b899fa86237ede?width=3208"
