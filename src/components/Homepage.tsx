@@ -208,15 +208,34 @@ function Homepage() {
           </header>
 
           {/* Hero Section */}
-          <section
-            className="pt-24 sm:pt-32 lg:pt-[254px] px-4 sm:px-6 lg:px-[57px] pb-16 sm:pb-20 lg:pb-[100px] relative min-h-screen bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/image/Layer 35 (1).png')" }}
-          >
+          <section className="pt-16 sm:pt-20 lg:pt-[120px] px-4 sm:px-6 lg:px-[57px] pb-16 sm:pb-20 lg:pb-[100px] relative min-h-screen overflow-hidden">
+            {/* Background Video */}
+            <video
+              className="absolute inset-0 w-full h-full object-cover -z-10"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              controls={false}
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+              onEnded={(e) => {
+                e.currentTarget.currentTime = 0;
+                e.currentTarget.play();
+              }}
+            >
+              <source src="/image/Video_banner.mp4" type="video/mp4" />
+            </video>
+            {/* Video Overlay */}
+            <div className="absolute inset-0 bg-black/40 -z-5"></div>
             <div className="max-w-full sm:max-w-[580px] lg:max-w-[623px]">
-              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-normal leading-tight sm:leading-normal mb-2 sm:mb-[10px] drop-shadow-lg">
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-bold leading-tight sm:leading-normal mb-2 sm:mb-[10px] drop-shadow-lg">
                 Kits de Incorporação para
               </h1>
-              <h2 className="text-[#316bb6] text-xl sm:text-2xl md:text-3xl lg:text-[41px] font-normal leading-tight sm:leading-normal mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-lg">
+              <h2 className="text-[#316bb6] text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-bold leading-tight sm:leading-normal mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-lg">
                 P2P Core
               </h2>
               <p className="text-white text-sm sm:text-base lg:text-[17px] font-normal leading-6 sm:leading-7 lg:leading-[27.1px] mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-sm">
@@ -261,7 +280,7 @@ function Homepage() {
               </h3>
 
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 mb-12 sm:mb-16 lg:mb-[106px]">
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 bg-[rgba(62,132,190,0.2)] px-3 sm:px-4">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
                   HastyP2P Core
                 </div>
                 <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
