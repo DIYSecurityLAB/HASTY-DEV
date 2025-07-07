@@ -281,7 +281,7 @@ function Homepage() {
               </h3>
 
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 mb-12 sm:mb-16 lg:mb-[106px]">
-                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 bg-[rgba(62,132,190,0.2)] px-3 sm:px-4">
+                <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
                   HastyP2P Core
                 </div>
                 <div className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4">
