@@ -15,6 +15,16 @@ function Homepage() {
         {/* Background Layer */}
         <div className="absolute top-0 left-0 w-full h-full bg-[#01010d] -z-20"></div>
 
+        {/* Radial Glow Background */}
+        <div
+          className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.2) 80%, transparent 100%)",
+            mixBlendMode: "soft-light",
+          }}
+        ></div>
+
         {/* Circuit Background */}
         <div className="absolute -top-16 sm:-top-32 -left-0.5 w-full sm:w-[1580px] h-[400px] sm:h-[789px] -z-10 opacity-80 sm:opacity-100">
           <div className="relative w-full h-full bg-[#d9d9d9]">
