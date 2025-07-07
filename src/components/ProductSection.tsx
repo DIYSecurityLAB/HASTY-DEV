@@ -40,7 +40,7 @@ const products: Product[] = [
     objetivo:
       "Processamento de pagamentos cripto em USDT, BTC e mais, com segurança, conformidade e experiência de checkout moderna.",
     operacao:
-      "Sistema white-label com QR code, confirma��ão on-chain e integração total ao fluxo de pagamento do cliente.",
+      "Sistema white-label com QR code, confirmação on-chain e integração total ao fluxo de pagamento do cliente.",
     desenvolvedor:
       "Equipe experiente da Hastydev, com foco em gateways Web3 e APIs descentralizadas de pagamento.",
     tempo:
@@ -95,7 +95,8 @@ function ProductSection() {
           <div
             key={product.id}
             onClick={() => handleProductClick(product)}
-            className="flex items-center justify-center min-w-[280px] max-w-[320px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] lg:min-w-[240px] xl:min-w-[277px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4"
+            className="flex items-center justify-center min-w-[280px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] md:max-w-[320px] lg:min-w-[280px] lg:max-w-[320px] xl:min-w-[300px] xl:max-w-[340px] 2xl:min-w-[320px] 2xl:max-w-[360px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4"
+            style={{ flexBasis: "calc(50% - 12px)" }}
           >
             {product.name}
           </div>
@@ -104,7 +105,7 @@ function ProductSection() {
 
       {/* Product Content */}
       <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[78px] items-start">
-        <div className="product-info w-full lg:flex-1 lg:max-w-[529px] order-2 lg:order-1">
+        <div className="product-info w-full lg:flex-1 lg:max-w-[529px] order-1 lg:order-1">
           <h3 className="text-white text-xl sm:text-2xl lg:text-[34px] font-normal leading-normal mb-6 sm:mb-8 lg:mb-[56px]">
             <span className="text-[#3d83bd]">{activeProduct.title}</span>{" "}
             {activeProduct.titleAccent}
@@ -132,7 +133,7 @@ function ProductSection() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center lg:justify-end w-full lg:flex-1 order-1 lg:order-2">
+        <div className="flex justify-center lg:justify-end w-full lg:flex-1 order-2 lg:order-2">
           <img
             src={activeProduct.image}
             alt={activeProduct.name}
