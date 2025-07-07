@@ -331,7 +331,7 @@ function Homepage() {
                 </div>
                 <div className="flex justify-center lg:justify-end w-full lg:flex-1 order-1 lg:order-2">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0d8eb7396fb9eccbf1b3ccc22239a60437c2f71?width=1392"
+                    src="image/imagem-btc.png"
                     alt="HastyP2P Core"
                     className="w-full max-w-[500px] lg:max-w-[696px] h-auto rounded-lg object-cover"
                   />
