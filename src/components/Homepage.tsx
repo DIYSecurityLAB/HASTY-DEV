@@ -118,17 +118,17 @@ function Homepage() {
                 {/* Mobile Hamburger Button */}
                 <button
                   onClick={toggleMenu}
-                  className="lg:hidden flex flex-col gap-1 p-2 transition-all duration-300 hover:bg-white/10 rounded-md group"
+                  className="lg:hidden flex flex-col justify-center items-center w-10 h-10 p-2 transition-all duration-300 hover:bg-white/10 rounded-md group relative"
                   aria-label="Toggle menu"
                 >
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+                    className={`block w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] absolute ${isMenuOpen ? "rotate-45" : "-translate-y-1.5"}`}
                   ></span>
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "opacity-0" : ""}`}
+                    className={`block w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] absolute ${isMenuOpen ? "opacity-0" : ""}`}
                   ></span>
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                    className={`block w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] absolute ${isMenuOpen ? "-rotate-45" : "translate-y-1.5"}`}
                   ></span>
                 </button>
               </div>
@@ -526,22 +526,22 @@ function Homepage() {
 
             <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-[50px] xl:px-[94px] relative z-10">
               {/* Main Footer Content */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 lg:mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 lg:mb-16 text-center md:text-left">
                 {/* Company Info */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 flex flex-col items-center md:items-start">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
                     alt="HastyDev Footer Logo"
                     className="w-[140px] sm:w-[160px] lg:w-[174px] h-auto mb-6 transition-all duration-300 hover:scale-105"
                   />
-                  <p className="text-white/70 text-sm sm:text-base lg:text-[16px] font-normal leading-6 sm:leading-7 lg:leading-[24px] mb-6">
+                  <p className="text-white/70 text-sm sm:text-base lg:text-[16px] font-normal leading-6 sm:leading-7 lg:leading-[24px] mb-6 max-w-md">
                     {t("footer.company_description")}
                   </p>
 
                   {/* Contact Button */}
-                  <div className="mt-8">
+                  <div className="mt-8 w-full flex justify-center md:justify-start">
                     <button
-                      className="bg-[#316bb6] hover:bg-[#2a5c9f] text-white border-0 rounded-lg py-3 px-6 text-base font-medium cursor-pointer transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                      className="bg-[#316bb6] hover:bg-[#2a5c9f] text-white border-0 rounded-lg py-3 px-6 text-base font-medium cursor-pointer transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl touch-manipulation"
                       onClick={() => {
                         window.open(
                           "https://wa.me/5511956394485?text=Olá! Gostaria de saber mais sobre os produtos da HastyDev.",
@@ -564,15 +564,15 @@ function Homepage() {
                 </div>
 
                 {/* Services */}
-                <div>
+                <div className="flex flex-col items-center md:items-start">
                   <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
                     {t("footer.products_title")}
                   </h3>
-                  <ul className="space-y-3">
-                    <li>
+                  <ul className="space-y-3 w-full">
+                    <li className="flex justify-center md:justify-start">
                       <a
                         href="#produtos"
-                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2 touch-manipulation"
                         onClick={(e) => {
                           e.preventDefault();
                           document
@@ -580,14 +580,14 @@ function Homepage() {
                             ?.scrollIntoView({ behavior: "smooth" });
                         }}
                       >
-                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2 flex-shrink-0"></span>
                         HastyP2P Core
                       </a>
                     </li>
-                    <li>
+                    <li className="flex justify-center md:justify-start">
                       <a
                         href="#produtos"
-                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2 touch-manipulation"
                         onClick={(e) => {
                           e.preventDefault();
                           document
@@ -595,14 +595,14 @@ function Homepage() {
                             ?.scrollIntoView({ behavior: "smooth" });
                         }}
                       >
-                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2 flex-shrink-0"></span>
                         HastyPay Engine
                       </a>
                     </li>
-                    <li>
+                    <li className="flex justify-center md:justify-start">
                       <a
                         href="#produtos"
-                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2 touch-manipulation"
                         onClick={(e) => {
                           e.preventDefault();
                           document
@@ -610,14 +610,14 @@ function Homepage() {
                             ?.scrollIntoView({ behavior: "smooth" });
                         }}
                       >
-                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2 flex-shrink-0"></span>
                         HastyLegal Guide
                       </a>
                     </li>
-                    <li>
+                    <li className="flex justify-center md:justify-start">
                       <a
                         href="#produtos"
-                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2 touch-manipulation"
                         onClick={(e) => {
                           e.preventDefault();
                           document
@@ -625,7 +625,7 @@ function Homepage() {
                             ?.scrollIntoView({ behavior: "smooth" });
                         }}
                       >
-                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2 flex-shrink-0"></span>
                         HastyBrand Studio
                       </a>
                     </li>
@@ -633,18 +633,18 @@ function Homepage() {
                 </div>
 
                 {/* Social & Links */}
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center md:items-start">
                   <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
                     {t("footer.connect_title")}
                   </h3>
 
                   {/* Social Media Links */}
-                  <div className="flex gap-3 mb-6">
+                  <div className="flex gap-3 mb-6 justify-center md:justify-start">
                     <a
                       href="http://instagram.com/hastydev/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#E4405F] hover:to-[#C13584] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10"
+                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#E4405F] hover:to-[#C13584] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10 touch-manipulation"
                       title="Siga no Instagram"
                     >
                       <svg
@@ -659,7 +659,7 @@ function Homepage() {
                       href="https://www.linkedin.com/company/hastydev/posts/?feedView=all"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0077B5] hover:to-[#005E94] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10"
+                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0077B5] hover:to-[#005E94] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10 touch-manipulation"
                       title="Conecte no LinkedIn"
                     >
                       <svg
@@ -673,7 +673,7 @@ function Homepage() {
                   </div>
 
                   {/* Decoration Image */}
-                  <div className="mt-auto">
+                  <div className="mt-auto flex justify-center md:justify-start w-full">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/76ed3d53a0b95966cfb1f1e42efdbb7851216083?width=254"
                       alt="Footer Decoration"
@@ -685,8 +685,8 @@ function Homepage() {
 
               {/* Footer Bottom */}
               <div className="border-t border-white/10 pt-6 lg:pt-8">
-                <div className="text-center">
-                  <p className="text-white/50 text-sm">
+                <div className="text-center w-full">
+                  <p className="text-white/50 text-sm leading-relaxed px-4">
                     {t("footer.copyright")}
                   </p>
                 </div>
