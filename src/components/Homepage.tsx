@@ -22,27 +22,7 @@ function Homepage() {
           {/* Background Layer */}
           <div className="absolute top-0 left-0 w-full h-full bg-[#01010d] -z-20"></div>
 
-          {/* Radial Glow Background */}
-          <div
-            className="absolute top-0 left-0 w-full h-full z-[1] pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.2) 80%, transparent 100%)",
-              mixBlendMode: "soft-light",
-            }}
-          ></div>
-
-          {/* Circuit Background */}
-          <div className="absolute -top-16 sm:-top-32 -left-0.5 w-full sm:w-[1580px] h-[400px] sm:h-[789px] -z-10 opacity-80 sm:opacity-100">
-            <div className="relative w-full h-full bg-[#d9d9d9]">
-              <div className="absolute top-[108px] sm:top-[216px] left-[112px] sm:left-[224px] w-[calc(100%-224px)] sm:w-[1357px] h-[286px] sm:h-[573px] bg-white"></div>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e813f8e15d799c4c8651e01a46f7898f9ebe1d20?width=3108"
-                alt=""
-                className="absolute top-[57px] sm:top-[114px] -left-1 w-full sm:w-[1554px] h-[393px] sm:h-[786px] opacity-[0.5686] mix-blend-multiply object-cover"
-              />
-            </div>
-          </div>
+       
 
           {/* Header Section */}
           <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#0e213a] via-[#1a2c4a] to-[#0e213a] z-[1000] py-3 lg:py-[15px] h-auto lg:h-[90px] flex items-center relative backdrop-blur-sm border-b border-[#316bb6]/20 shadow-lg">
@@ -192,7 +172,7 @@ function Homepage() {
               muted
               loop
               playsInline
-              preload="auto"
+              preload="metadata"
               controls={false}
               style={{
                 objectFit: "cover",
@@ -231,7 +211,15 @@ function Homepage() {
               </button>
             </div>
           </section>
-
+   {/* Radial Glow Background */}
+          <div
+            className="absolute top-0 left-0 w-full h-full z-[1] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0.2) 80%, transparent 100%)",
+              mixBlendMode: "soft-light",
+            }}
+          ></div>
           {/* Section 2 - Infinitas Possibilidades */}
           <section
             id="produtos"
