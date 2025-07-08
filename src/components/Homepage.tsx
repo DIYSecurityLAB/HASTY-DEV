@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SEO from "./SEO";
 import ProductSection from "./ProductSection";
+import RotatingText from "./RotatingText";
 
 function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,8 +42,10 @@ function Homepage() {
           </div>
 
           {/* Header Section */}
-          <header className="fixed top-0 left-0 right-0 bg-[#0e213a] z-[1000] py-3 lg:py-[15px] h-auto lg:h-[90px] flex items-center relative">
-            <div className="max-w-[1580px] mx-auto px-4 sm:px-[20px] lg:px-[54px] w-full">
+          <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#0e213a] via-[#1a2c4a] to-[#0e213a] z-[1000] py-3 lg:py-[15px] h-auto lg:h-[90px] flex items-center relative backdrop-blur-sm border-b border-[#316bb6]/20 shadow-lg">
+            {/* Header glass effect overlay */}
+            <div className="absolute inset-0 bg-[#0e213a]/80 backdrop-blur-md"></div>
+            <div className="max-w-[1580px] mx-auto px-4 sm:px-[20px] lg:px-[54px] w-full relative z-10">
               {/* Desktop and Mobile Header Container */}
               <div className="flex items-center justify-between w-full h-14 lg:h-[60px]">
                 {/* Logo */}
@@ -53,12 +56,12 @@ function Homepage() {
                       e.preventDefault();
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
-                    className="cursor-pointer"
+                    className="cursor-pointer group"
                   >
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
                       alt="HastyDev Logo"
-                      className="h-6 lg:h-[26px] w-auto hover:opacity-80 transition-opacity duration-300"
+                      className="h-6 lg:h-[26px] w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(49,107,182,0.6)] group-hover:scale-105"
                     />
                   </a>
                 </div>
@@ -67,7 +70,7 @@ function Homepage() {
                 <nav className="hidden lg:flex gap-[135px] items-center">
                   <a
                     href="#produtos"
-                    className="text-white no-underline text-[15px] font-normal transition-colors duration-300 hover:text-[#316bb6]"
+                    className="text-white no-underline text-[15px] font-normal transition-all duration-300 hover:text-[#316bb6] hover:drop-shadow-[0_0_4px_rgba(49,107,182,0.5)] relative group px-2 py-1"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -76,10 +79,11 @@ function Homepage() {
                     }}
                   >
                     Produto
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#316bb6] transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <a
                     href="#dashboard"
-                    className="text-[#316bb6] no-underline text-[15px] font-normal transition-colors duration-300"
+                    className="text-[#316bb6] no-underline text-[15px] font-normal transition-all duration-300 drop-shadow-[0_0_4px_rgba(49,107,182,0.5)] relative group px-2 py-1"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -88,10 +92,11 @@ function Homepage() {
                     }}
                   >
                     Plataforma
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#316bb6]"></span>
                   </a>
                   <a
                     href="#sobre"
-                    className="text-white no-underline text-[15px] font-normal transition-colors duration-300 hover:text-[#316bb6]"
+                    className="text-white no-underline text-[15px] font-normal transition-all duration-300 hover:text-[#316bb6] hover:drop-shadow-[0_0_4px_rgba(49,107,182,0.5)] relative group px-2 py-1"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -100,16 +105,17 @@ function Homepage() {
                     }}
                   >
                     Sobre
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#316bb6] transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 </nav>
 
                 {/* Desktop Language Selector */}
-                <div className="hidden lg:flex items-center gap-1 py-[5.5px] pr-[10.934px] pb-[4.5px] pl-0">
-                  <span className="text-white text-[9px] font-normal">
+                <div className="hidden lg:flex items-center gap-1 py-[5.5px] pr-[10.934px] pb-[4.5px] pl-0 hover:bg-white/10 rounded-md transition-all duration-300 cursor-pointer group">
+                  <span className="text-white text-[9px] font-normal group-hover:text-[#316bb6] transition-colors duration-300">
                     Português (Brasil)
                   </span>
                   <svg
-                    className="w-[6px] h-[3px]"
+                    className="w-[6px] h-[3px] transition-transform duration-300 group-hover:rotate-180"
                     width="8"
                     height="7"
                     viewBox="0 0 8 7"
@@ -117,8 +123,9 @@ function Homepage() {
                   >
                     <path
                       d="M1.51001 1.35181L4.28821 4.68541L7.06641 1.35181"
-                      stroke="white"
+                      stroke="currentColor"
                       strokeWidth="2.22253"
+                      className="text-white group-hover:text-[#316bb6] transition-colors duration-300"
                     />
                   </svg>
                 </div>
@@ -126,17 +133,17 @@ function Homepage() {
                 {/* Mobile Hamburger Button */}
                 <button
                   onClick={toggleMenu}
-                  className="lg:hidden flex flex-col gap-1 p-2 transition-all duration-300"
+                  className="lg:hidden flex flex-col gap-1 p-2 transition-all duration-300 hover:bg-white/10 rounded-md group"
                   aria-label="Toggle menu"
                 >
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
                   ></span>
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "opacity-0" : ""}`}
                   ></span>
                   <span
-                    className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                    className={`w-6 h-0.5 bg-white transition-all duration-300 group-hover:bg-[#316bb6] ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
                   ></span>
                 </button>
               </div>
@@ -145,10 +152,10 @@ function Homepage() {
               <div
                 className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"} overflow-hidden`}
               >
-                <nav className="flex flex-col gap-4 py-4 border-t border-white/10">
+                <nav className="flex flex-col gap-4 py-4 border-t border-[#316bb6]/30 bg-gradient-to-b from-[#0e213a]/50 to-[#1a2c4a]/50 backdrop-blur-sm rounded-b-lg mx-2 mt-2">
                   <a
                     href="#produtos"
-                    className="text-white no-underline text-sm font-normal transition-colors duration-300 hover:text-[#316bb6] py-2"
+                    className="text-white no-underline text-sm font-normal transition-all duration-300 hover:text-[#316bb6] hover:bg-white/5 py-2 px-3 rounded-md mx-2"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -161,7 +168,7 @@ function Homepage() {
                   </a>
                   <a
                     href="#dashboard"
-                    className="text-[#316bb6] no-underline text-sm font-normal transition-colors duration-300 py-2"
+                    className="text-[#316bb6] no-underline text-sm font-normal transition-all duration-300 bg-[#316bb6]/10 py-2 px-3 rounded-md mx-2"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -174,7 +181,7 @@ function Homepage() {
                   </a>
                   <a
                     href="#sobre"
-                    className="text-white no-underline text-sm font-normal transition-colors duration-300 hover:text-[#316bb6] py-2"
+                    className="text-white no-underline text-sm font-normal transition-all duration-300 hover:text-[#316bb6] hover:bg-white/5 py-2 px-3 rounded-md mx-2"
                     onClick={(e) => {
                       e.preventDefault();
                       document
@@ -185,7 +192,7 @@ function Homepage() {
                   >
                     Sobre
                   </a>
-                  <div className="flex items-center gap-1 py-2 border-t border-white/10 mt-2">
+                  <div className="flex items-center gap-1 py-2 px-3 border-t border-[#316bb6]/20 mt-2 mx-2 hover:bg-white/5 rounded-md transition-all duration-300">
                     <span className="text-white text-xs font-normal">
                       Português (Brasil)
                     </span>
@@ -237,7 +244,7 @@ function Homepage() {
                 Kits de Incorporação para
               </h1>
               <h2 className="text-[#316bb6] text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-bold leading-tight sm:leading-normal mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-lg">
-                P2P Core
+                <RotatingText />
               </h2>
               <p className="text-white text-sm sm:text-base lg:text-[17px] font-normal leading-6 sm:leading-7 lg:leading-[27.1px] mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-sm">
                 A Hastydev transforma sua ideia em realidade no universo cripto,
