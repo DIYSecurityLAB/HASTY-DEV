@@ -54,13 +54,12 @@ function ProductSection() {
       </h3>
 
       {/* Product Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 mb-12 sm:mb-16 lg:mb-[106px]">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-12 sm:mb-16 lg:mb-[106px] max-w-6xl mx-auto">
         {products.map((product) => (
           <div
             key={product.id}
             onClick={() => handleProductClick(product)}
-            className="flex items-center justify-center min-w-[280px] flex-1 sm:flex-none sm:min-w-[240px] md:min-w-[260px] md:max-w-[320px] lg:min-w-[280px] lg:max-w-[320px] xl:min-w-[300px] xl:max-w-[340px] 2xl:min-w-[320px] 2xl:max-w-[360px] h-[51px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] 2xl:text-[24px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4"
-            style={{ flexBasis: "calc(50% - 12px)" }}
+            className="flex items-center justify-center h-[42px] border-[2.223px] border-[#316bb6] rounded-xl text-white text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-[20px] font-normal cursor-pointer transition-all duration-300 hover:bg-[rgba(62,132,190,0.1)] px-3 sm:px-4"
           >
             {t(`products.${product.key}.name`)}
           </div>
