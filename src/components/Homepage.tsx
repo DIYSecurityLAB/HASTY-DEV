@@ -541,7 +541,7 @@ function Homepage() {
                   <img
                     src="/image/Vector Smart Object (2).png"
                     alt="Vector Smart Object Logo"
-                    className="h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-7 xl:max-h-[30px] 2xl:max-h-[35px] brightness-0 invert flex-shrink-0"
+                    className="h-auto max-h-6 sm:max-h-7 md:max-h-8 lg:max-h-9 xl:max-h-[45px] 2xl:max-h-[50px] brightness-0 invert flex-shrink-0"
                   />
 
                   <img
