@@ -570,67 +570,154 @@ function Homepage() {
           {/* Footer */}
           <footer
             id="contato"
-            className="relative bg-[#0e213a] pt-12 sm:pt-16 lg:pt-[70px] pb-6 sm:pb-8 lg:pb-[40px] mt-16 sm:mt-20 lg:mt-[100px] overflow-hidden"
+            className="relative bg-gradient-to-br from-[#0e213a] via-[#1a2c4a] to-[#0e213a] pt-16 sm:pt-20 lg:pt-[80px] pb-8 sm:pb-10 lg:pb-[50px] mt-16 sm:mt-20 lg:mt-[100px] overflow-hidden"
           >
+            {/* Footer Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 1px 1px, rgba(49,107,182,0.3) 1px, transparent 0)`,
+                  backgroundSize: "20px 20px",
+                }}
+              ></div>
+            </div>
+
             {/* Footer Background Image */}
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1eb06832d834ee8fce8a2ec639b899fa86237ede?width=3208"
               alt="Footer Background"
-              className="absolute bottom-0 left-0 w-full h-[200px] sm:h-[280px] lg:h-[339px] object-cover -z-10"
+              className="absolute bottom-0 left-0 w-full h-[200px] sm:h-[280px] lg:h-[339px] object-cover opacity-20 -z-10"
             />
 
             <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-[50px] xl:px-[94px] relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_auto] gap-8 sm:gap-10 lg:gap-[60px] xl:gap-[94px] items-start">
-                {/* Left Column - Logo and Description */}
-                <div className="footer-left text-center lg:text-left">
+              {/* Main Footer Content */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 lg:mb-16">
+                {/* Company Info */}
+                <div className="lg:col-span-2">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a395ff77656e0ca5e09947460fe48467a7532cc?width=348"
                     alt="HastyDev Footer Logo"
-                    className="w-[140px] sm:w-[160px] lg:w-[174px] h-auto mb-6 sm:mb-8 lg:mb-[77px] mx-auto lg:mx-0"
+                    className="w-[140px] sm:w-[160px] lg:w-[174px] h-auto mb-6 transition-all duration-300 hover:scale-105"
                   />
-                  <p className="text-white text-sm sm:text-base lg:text-lg xl:text-[20px] font-normal leading-6 sm:leading-7 lg:leading-8 xl:leading-[32px] opacity-[0.59]">
+                  <p className="text-white/70 text-sm sm:text-base lg:text-[16px] font-normal leading-6 sm:leading-7 lg:leading-[24px] mb-6">
                     Especialistas em transformar ideias em realidade no universo
                     Web3. Oferecemos soluções completas que integram tecnologia,
                     jurídico e marketing para criar produtos escaláveis no
-                    ecossistema descentralizado. Sua jornada no mundo cripto
-                    começa aqui.
+                    ecossistema descentralizado.
                   </p>
-                </div>
 
-                {/* Center Column - Additional Content */}
-                <div className="footer-center text-center lg:text-left">
-                  <p className="text-white text-sm sm:text-base lg:text-lg xl:text-[20px] font-normal leading-6 sm:leading-7 lg:leading-8 xl:leading-[30.6px] opacity-[0.59] mt-0 lg:mt-[105px]">
-                    Automação P2P com contratos inteligentes
-                    <br className="hidden lg:block" />
-                    <br className="hidden lg:block" />
-                    Incorporação em jurisdições estratégicas
-                    <br className="hidden lg:block" />
-                    <br className="hidden lg:block" />
-                    Networking ativo no mercado Web3
-                  </p>
-                </div>
-
-                {/* Right Column - Decoration and Social Links */}
-                <div className="footer-right flex flex-col items-center lg:items-end justify-between min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]">
-                  {/* Decoration Image */}
-                  <div className="decoration-image mb-6 sm:mb-8 lg:mb-[47px]">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/76ed3d53a0b95966cfb1f1e42efdbb7851216083?width=254"
-                      alt="Footer Decoration"
-                      className="w-[80px] sm:w-[100px] lg:w-[127px] h-auto opacity-[0.45]"
-                    />
+                  {/* Contact Button */}
+                  <div className="mt-8">
+                    <button
+                      className="bg-[#316bb6] hover:bg-[#2a5c9f] text-white border-0 rounded-lg py-3 px-6 text-base font-medium cursor-pointer transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                      onClick={() => {
+                        window.open(
+                          "https://wa.me/5511956394485?text=Olá! Gostaria de saber mais sobre os produtos da HastyDev.",
+                          "_blank",
+                        );
+                      }}
+                    >
+                      <span className="flex items-center gap-2">
+                        <svg
+                          className="w-4 h-4"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488" />
+                        </svg>
+                        Entre em contato
+                      </span>
+                    </button>
                   </div>
+                </div>
+
+                {/* Services */}
+                <div>
+                  <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
+                    Nossos Produtos
+                  </h3>
+                  <ul className="space-y-3">
+                    <li>
+                      <a
+                        href="#produtos"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document
+                            .getElementById("produtos")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        HastyP2P Core
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#produtos"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document
+                            .getElementById("produtos")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        HastyPay Engine
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#produtos"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document
+                            .getElementById("produtos")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        HastyLegal Guide
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#produtos"
+                        className="text-white/80 hover:text-[#316bb6] transition-all duration-300 text-base font-medium cursor-pointer flex items-center gap-3 group py-2"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document
+                            .getElementById("produtos")
+                            ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
+                        <span className="w-1.5 h-1.5 bg-[#316bb6] rounded-full transition-all duration-300 group-hover:w-2 group-hover:h-2"></span>
+                        HastyBrand Studio
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Social & Links */}
+                <div className="flex flex-col">
+                  <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
+                    Conecte-se
+                  </h3>
 
                   {/* Social Media Links */}
-                  <div className="social-links flex gap-4 sm:gap-5 lg:gap-[20px]">
+                  <div className="flex gap-3 mb-6">
                     <a
                       href="http://instagram.com/hastydev/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-all duration-300 hover:opacity-70"
+                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#E4405F] hover:to-[#C13584] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10"
+                      title="Siga no Instagram"
                     >
                       <svg
-                        className="w-6 sm:w-7 lg:w-[30px] h-6 sm:h-7 lg:h-[30px] text-white"
+                        className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-125"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -641,10 +728,11 @@ function Homepage() {
                       href="https://www.linkedin.com/company/hastydev/posts/?feedView=all"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-all duration-300 hover:opacity-70"
+                      className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-gradient-to-br hover:from-[#0077B5] hover:to-[#005E94] hover:scale-110 hover:shadow-xl hover:-translate-y-1 group backdrop-blur-sm border border-white/10"
+                      title="Conecte no LinkedIn"
                     >
                       <svg
-                        className="w-6 sm:w-7 lg:w-[30px] h-6 sm:h-7 lg:h-[30px] text-white"
+                        className="w-5 h-5 text-white transition-all duration-300 group-hover:scale-125"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -652,6 +740,24 @@ function Homepage() {
                       </svg>
                     </a>
                   </div>
+
+                  {/* Decoration Image */}
+                  <div className="mt-auto">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/76ed3d53a0b95966cfb1f1e42efdbb7851216083?width=254"
+                      alt="Footer Decoration"
+                      className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto opacity-30 transition-opacity duration-300 hover:opacity-50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer Bottom */}
+              <div className="border-t border-white/10 pt-6 lg:pt-8">
+                <div className="text-center">
+                  <p className="text-white/50 text-sm">
+                    © 2024 HastyDev. Todos os direitos reservados.
+                  </p>
                 </div>
               </div>
             </div>
