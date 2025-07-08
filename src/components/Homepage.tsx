@@ -411,53 +411,28 @@ function Homepage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-[32px]">
                 <div className="w-full max-w-[472px] mx-auto lg:mx-0 min-h-[350px] sm:min-h-[400px] lg:min-h-[467px] h-auto bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[34px] flex flex-col justify-between box-border">
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mb-4 sm:mb-5 lg:mb-[20px] break-words flex-grow">
-                    "A Hastydev entendeu exatamente o que a gente precisava e
-                    foi muito ágil em entregar tudo funcionando. A automação com
-                    contratos inteligentes usando o DEPIX melhorou nossas
-                    conversões e tirou várias travas operacionais que a gente
-                    tinha. Os relatórios deixaram tudo mais claro para nossos
-                    parceiros e influenciadores, o que melhorou muito a relação
-                    com eles. Foi um alívio contar com um time tão técnico e
-                    direto ao ponto."
+                    "{t("testimonials.testimonial1.text")}"
                   </p>
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mt-auto flex-shrink-0">
-                    — Equipe Alfredp2p
+                    {t("testimonials.testimonial1.author")}
                   </p>
                 </div>
 
                 <div className="w-full max-w-[472px] mx-auto lg:mx-0 min-h-[350px] sm:min-h-[400px] lg:min-h-[467px] h-auto bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[34px] flex flex-col justify-between box-border">
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mb-4 sm:mb-5 lg:mb-[20px] break-words flex-grow">
-                    "Ficamos impressionados com os resultados do Alfred P2P após
-                    a integração do DEPIX e a automação feita pela Hastydev. A
-                    redução significativa nos MEDs foi um grande avanço, mas o
-                    que realmente chamou nossa atenção foi o aumento no volume
-                    de transações internamente. Isso não só melhorou a
-                    eficiência da operação, como também se tornou um marco na
-                    evolução da descentralização dos P2Ps. O trabalho da
-                    Hastydev foi fundamental para trazer mais segurança,
-                    escalabilidade e confiança para o ecossistema."
+                    "{t("testimonials.testimonial2.text")}"
                   </p>
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mt-auto flex-shrink-0">
-                    — Equipe Eulen
+                    {t("testimonials.testimonial2.author")}
                   </p>
                 </div>
 
                 <div className="w-full max-w-[472px] mx-auto lg:mx-0 min-h-[350px] sm:min-h-[400px] lg:min-h-[467px] h-auto bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[34px] flex flex-col justify-between box-border">
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mb-4 sm:mb-5 lg:mb-[20px] break-words flex-grow">
-                    "Foi impressionante ver como uma solução básica, que só
-                    precisava ser estruturada corretamente, se transformou em um
-                    sistema operacional de câmbio em cripto que nos colocou na
-                    frente do mercado. A Hastydev fez isso acontecer de forma
-                    ágil e com precisão. Além disso, o que realmente se destacou
-                    foi o suporte contínuo e a consultoria que recebemos durante
-                    todo o processo. Enquanto evoluímos o projeto, conseguimos
-                    operacionalizar e lucrar ao mesmo tempo, o que tornou a
-                    experiência ainda mais valiosa. Estamos muito satisfeitos
-                    com o impacto positivo que a Hastydev teve no nosso
-                    negócio."
+                    "{t("testimonials.testimonial3.text")}"
                   </p>
                   <p className="text-white text-sm sm:text-base lg:text-[18px] font-normal leading-6 sm:leading-7 lg:leading-[27px] mt-auto flex-shrink-0">
-                    — Equipe pagueBit
+                    {t("testimonials.testimonial3.author")}
                   </p>
                 </div>
               </div>
