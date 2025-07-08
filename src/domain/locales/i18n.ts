@@ -4,11 +4,12 @@ import translationEN from "./en/translation.json";
 import translationES from "./es/translation.json";
 import translationPT from "./pt/translation.json";
 
-export enum AcceptedLanguages {
-  pt = "pt",
-  en = "en",
-  es = "es",
-}
+export const AcceptedLanguages = {
+  pt: "pt",
+  en: "en",
+  es: "es",
+} as const;
+export type AcceptedLanguages = typeof AcceptedLanguages[keyof typeof AcceptedLanguages];
 
 export const languageNames = {
   [AcceptedLanguages.pt]: "Português (Brasil)",

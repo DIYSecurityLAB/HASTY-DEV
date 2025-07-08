@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getTexts = (t: any) => [
   t("hero.rotating_texts.p2p_core"),
   t("hero.rotating_texts.pay_engine"),
@@ -17,7 +18,7 @@ function RotatingText() {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     if (isTyping) {
       // Typing effect

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { AcceptedLanguages, languageNames } from "../domain/locales/i18n";
 import { useLanguage } from "../domain/locales/hooks/useLanguage";
 
@@ -14,7 +13,7 @@ function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { currentLang, changeLanguage } = useLanguage();
-  const { t } = useTranslation();
+
 
   const handleLanguageChange = (lang: AcceptedLanguages) => {
     changeLanguage(lang);
