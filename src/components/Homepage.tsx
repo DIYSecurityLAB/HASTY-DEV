@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import SEO from "./SEO";
 import ProductSection from "./ProductSection";
 import RotatingText from "./RotatingText";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -78,7 +81,7 @@ function Homepage() {
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    Produto
+                    {t("header.links.produto")}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#316bb6] transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <a
@@ -91,7 +94,7 @@ function Homepage() {
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    Plataforma
+                    {t("header.links.plataforma")}
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#316bb6]"></span>
                   </a>
                   <a
@@ -104,31 +107,13 @@ function Homepage() {
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    Sobre
+                    {t("header.links.sobre")}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#316bb6] transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 </nav>
 
                 {/* Desktop Language Selector */}
-                <div className="hidden lg:flex items-center gap-1 py-[5.5px] pr-[10.934px] pb-[4.5px] pl-0 hover:bg-white/10 rounded-md transition-all duration-300 cursor-pointer group">
-                  <span className="text-white text-[9px] font-normal group-hover:text-[#316bb6] transition-colors duration-300">
-                    Português (Brasil)
-                  </span>
-                  <svg
-                    className="w-[6px] h-[3px] transition-transform duration-300 group-hover:rotate-180"
-                    width="8"
-                    height="7"
-                    viewBox="0 0 8 7"
-                    fill="none"
-                  >
-                    <path
-                      d="M1.51001 1.35181L4.28821 4.68541L7.06641 1.35181"
-                      stroke="currentColor"
-                      strokeWidth="2.22253"
-                      className="text-white group-hover:text-[#316bb6] transition-colors duration-300"
-                    />
-                  </svg>
-                </div>
+                <LanguageSwitcher className="hidden lg:block" />
 
                 {/* Mobile Hamburger Button */}
                 <button
@@ -164,7 +149,7 @@ function Homepage() {
                       toggleMenu();
                     }}
                   >
-                    Produto
+                    {t("header.links.produto")}
                   </a>
                   <a
                     href="#dashboard"
@@ -177,7 +162,7 @@ function Homepage() {
                       toggleMenu();
                     }}
                   >
-                    Plataforma
+                    {t("header.links.plataforma")}
                   </a>
                   <a
                     href="#sobre"
@@ -190,26 +175,9 @@ function Homepage() {
                       toggleMenu();
                     }}
                   >
-                    Sobre
+                    {t("header.links.sobre")}
                   </a>
-                  <div className="flex items-center gap-1 py-2 px-3 border-t border-[#316bb6]/20 mt-2 mx-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                    <span className="text-white text-xs font-normal">
-                      Português (Brasil)
-                    </span>
-                    <svg
-                      className="w-[6px] h-[3px]"
-                      width="8"
-                      height="7"
-                      viewBox="0 0 8 7"
-                      fill="none"
-                    >
-                      <path
-                        d="M1.51001 1.35181L4.28821 4.68541L7.06641 1.35181"
-                        stroke="white"
-                        strokeWidth="2.22253"
-                      />
-                    </svg>
-                  </div>
+                  <LanguageSwitcher isMobile={true} />
                 </nav>
               </div>
             </div>
@@ -241,23 +209,13 @@ function Homepage() {
             <div className="absolute inset-0 bg-black/40 -z-5"></div>
             <div className="max-w-full sm:max-w-[580px] lg:max-w-[623px]">
               <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-bold leading-tight sm:leading-normal mb-2 sm:mb-[10px] drop-shadow-lg">
-                Kits de Incorporação para
+                {t("hero.title")}
               </h1>
               <h2 className="text-[#316bb6] text-2xl sm:text-3xl md:text-4xl lg:text-[41px] font-bold leading-tight sm:leading-normal mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-lg">
                 <RotatingText />
               </h2>
-              <p className="text-white text-sm sm:text-base lg:text-[17px] font-normal leading-6 sm:leading-7 lg:leading-[27.1px] mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-sm">
-                A Hastydev transforma sua ideia em realidade no universo cripto,
-                com um pacote completo que une jurídico, marketing e tecnologia.
-                <br className="hidden sm:block" />
-                <br className="hidden sm:block" />
-                Seja você um investidor ou builder, estruturamos sua entidade
-                legal em uma jurisdição estratégica, garantindo segurança e
-                conformidade para empreender no mercado descentralizado.
-                <br className="hidden sm:block" />
-                <br className="hidden sm:block" />
-                Comece a construir com confiança — a partir de qualquer lugar do
-                mundo, com o suporte que você precisa para crescer no Web3.
+              <p className="text-white text-sm sm:text-base lg:text-[17px] font-normal leading-6 sm:leading-7 lg:leading-[27.1px] mb-8 sm:mb-12 lg:mb-[55px] drop-shadow-sm whitespace-pre-line">
+                {t("hero.description")}
               </p>
               <button
                 className="mt-4 sm:mt-6 lg:mt-8 bg-[#316bb6] hover:bg-[#2a5c9f] text-white border-0 rounded-md py-2 sm:py-3 lg:py-[12px] px-4 sm:px-6 lg:px-[24px] text-sm sm:text-base lg:text-[15px] font-normal cursor-pointer transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto shadow-lg"
@@ -269,7 +227,7 @@ function Homepage() {
                   );
                 }}
               >
-                Entre em contato conosco
+                {t("hero.contact_cta")}
               </button>
             </div>
           </section>
@@ -280,14 +238,6 @@ function Homepage() {
             className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[152px]"
           >
             <div className="max-w-[1304px] mx-auto">
-              <h2 className="text-center text-lg sm:text-xl lg:text-[24px] font-normal leading-normal uppercase mb-8 sm:mb-10 lg:mb-[48px]">
-                <span className="text-white">Infinitas </span>
-                <span className="text-[#3d83bd]">possibilidades</span>
-              </h2>
-              <h3 className="text-white text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[120px]">
-                Produtos para todas as suas necessidades
-              </h3>
-
               <ProductSection />
             </div>
           </section>
@@ -302,8 +252,24 @@ function Homepage() {
           >
             <div className="max-w-[1304px] mx-auto">
               <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[96px] mt-4 sm:mt-6 lg:mt-[32px]">
-                <span className="text-[#3d83bd]">Por que</span>
-                <span className="text-white"> a HastyDev?</span>
+                {t("why_hastydev.title").includes("?") ? (
+                  <>
+                    <span className="text-[#3d83bd]">
+                      {t("why_hastydev.title").split("?")[0]}
+                    </span>
+                    <span className="text-white">?</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-[#3d83bd]">
+                      {t("why_hastydev.title").split(" ").slice(0, 2).join(" ")}
+                    </span>
+                    <span className="text-white">
+                      {" "}
+                      {t("why_hastydev.title").split(" ").slice(2).join(" ")}
+                    </span>
+                  </>
+                )}
               </h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-[54px]">
@@ -317,14 +283,10 @@ function Homepage() {
                   </div>
                   <div className="content">
                     <h3 className="text-white text-base sm:text-lg lg:text-[17px] font-normal leading-normal mb-4 sm:mb-6 lg:mb-[32px] mt-2 lg:mt-[8px]">
-                      Tecnologia de ponta a ponta para o universo Web3
+                      {t("why_hastydev.card1.title")}
                     </h3>
                     <p className="text-white text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
-                      A Hastydev entrega soluções completas — do contrato
-                      inteligente ao design da sua marca. Combinamos engenharia,
-                      jurídico, UX e cripto em um só fluxo, pronto para
-                      transformar ideias em produtos escaláveis no ecossistema
-                      descentralizado.
+                      {t("why_hastydev.card1.description")}
                     </p>
                   </div>
                 </div>
@@ -339,14 +301,10 @@ function Homepage() {
                   </div>
                   <div className="content">
                     <h3 className="text-white text-base sm:text-lg lg:text-[17px] font-normal leading-normal mb-4 sm:mb-6 lg:mb-[32px] mt-2 lg:mt-[8px]">
-                      Velocidade de execução com precisão cirúrgica
+                      {t("why_hastydev.card2.title")}
                     </h3>
                     <p className="text-white text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
-                      No mercado Web3, mover rápido é essencial. Nossos times
-                      trabalham com entregas coordenadas, cronogramas visíveis e
-                      grupos ativos de projeto para garantir que você receba
-                      exatamente o que precisa, no tempo certo e sem retrabalho.
-                      Tudo com a agilidade que empresas de tecnologia exigem.
+                      {t("why_hastydev.card2.description")}
                     </p>
                   </div>
                 </div>
@@ -361,14 +319,10 @@ function Homepage() {
                   </div>
                   <div className="content">
                     <h3 className="text-white text-base sm:text-lg lg:text-[17px] font-normal leading-normal mb-4 sm:mb-6 lg:mb-[32px] mt-2 lg:mt-[8px]">
-                      Conexão direta com o ecossistema cripto real
+                      {t("why_hastydev.card3.title")}
                     </h3>
                     <p className="text-white text-sm sm:text-base lg:text-[16px] font-normal leading-6 lg:leading-[24px]">
-                      Mais do que prestadores, somos parte ativa do mercado
-                      Web3. Ao entrar com a Hastydev, você acessa um ambiente
-                      colaborativo com devs, juristas, designers e fundadores —
-                      criando um networking instantâneo e estratégico para
-                      crescer com base em experiência real.
+                      {t("why_hastydev.card3.description")}
                     </p>
                   </div>
                 </div>
@@ -386,10 +340,13 @@ function Homepage() {
           >
             <div className="max-w-[1304px] mx-auto">
               <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[80px] mt-4 sm:mt-6 lg:mt-[32px]">
-                <span className="text-[#316bb6]">Um painel</span>
+                <span className="text-[#316bb6]">
+                  {t("dashboard.title").split(" ")[0]}{" "}
+                  {t("dashboard.title").split(" ")[1]}
+                </span>
                 <span className="text-white">
                   {" "}
-                  para todas as suas atividades
+                  {t("dashboard.title").split(" ").slice(2).join(" ")}
                 </span>
               </h2>
 
@@ -397,33 +354,28 @@ function Homepage() {
                 <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[39px] flex-shrink-0 w-full lg:w-[350px] order-2 lg:order-1">
                   <div className="w-full min-h-[140px] sm:min-h-[150px] lg:min-h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[30px]">
                     <h3 className="text-white text-sm sm:text-base lg:text-[15px] font-normal leading-normal mb-4 sm:mb-5 lg:mb-[21px]">
-                      Crie seus Cupons para Promoções
+                      {t("dashboard.card1.title")}
                     </h3>
                     <p className="text-white text-xs sm:text-sm lg:text-[14px] font-normal leading-5 sm:leading-6 lg:leading-[21px]">
-                      Gere cupons personalizados direto na plataforma e aumente
-                      suas conversões com incentivos inteligentes. Promoções com
-                      cripto, na palma da sua mão.
+                      {t("dashboard.card1.description")}
                     </p>
                   </div>
 
                   <div className="w-full min-h-[140px] sm:min-h-[150px] lg:min-h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[30px]">
                     <h3 className="text-white text-sm sm:text-base lg:text-[15px] font-normal leading-normal mb-4 sm:mb-5 lg:mb-[21px]">
-                      Acompanhe o Desempenho em Tempo Real
+                      {t("dashboard.card2.title")}
                     </h3>
                     <p className="text-white text-xs sm:text-sm lg:text-[14px] font-normal leading-5 sm:leading-6 lg:leading-[21px]">
-                      Visualize conversões, volume de vendas e uso de cupons com
-                      total transparência. Mais controle, menos adivinhação.
+                      {t("dashboard.card2.description")}
                     </p>
                   </div>
 
                   <div className="w-full min-h-[140px] sm:min-h-[150px] lg:min-h-[167px] bg-gradient-to-br from-[#0e213a] via-[#0e213a] to-[rgba(255,255,255,0.1)] border-[2.223px] border-[#316bb6] rounded-xl p-5 sm:p-6 lg:p-[30px]">
                     <h3 className="text-white text-sm sm:text-base lg:text-[15px] font-normal leading-normal mb-4 sm:mb-5 lg:mb-[21px]">
-                      Dashboard feito para o Lojista
+                      {t("dashboard.card3.title")}
                     </h3>
                     <p className="text-white text-xs sm:text-sm lg:text-[14px] font-normal leading-5 sm:leading-6 lg:leading-[21px]">
-                      Tudo o que você precisa para gerenciar pagamentos e
-                      promoções em um só lugar. F��cil de usar, pronto pra
-                      escalar.
+                      {t("dashboard.card3.description")}
                     </p>
                   </div>
                 </div>
@@ -446,10 +398,13 @@ function Homepage() {
           <section className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[51px]">
             <div className="max-w-[1480px] mx-auto">
               <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[96px] mt-4 sm:mt-6 lg:mt-[32px]">
-                <span className="text-[#3d83bd]">O que</span>
+                <span className="text-[#3d83bd]">
+                  {t("testimonials.title").split(" ")[0]}{" "}
+                  {t("testimonials.title").split(" ")[1]}
+                </span>
                 <span className="text-white">
                   {" "}
-                  nossos usuários dizem sobre nós
+                  {t("testimonials.title").split(" ").slice(2).join(" ")}
                 </span>
               </h2>
 
@@ -516,8 +471,12 @@ function Homepage() {
           <section className="py-16 sm:py-20 lg:py-[120px] px-4 sm:px-6 lg:px-[50px] xl:px-[154px]">
             <div className="max-w-[1304px] mx-auto">
               <h2 className="text-center text-xl sm:text-2xl lg:text-[33px] font-normal leading-normal mb-12 sm:mb-16 lg:mb-[80px] mt-4 sm:mt-6 lg:mt-[32px]">
-                <span className="text-[#3d83bd]">Nossos </span>
-                <span className="text-white">clientes</span>
+                <span className="text-[#3d83bd]">
+                  {t("clients.title").split(" ")[0]}{" "}
+                </span>
+                <span className="text-white">
+                  {t("clients.title").split(" ")[1]}
+                </span>
               </h2>
 
               <div className="w-full max-w-[1274px] mx-auto min-h-[80px] sm:min-h-[100px] lg:min-h-[109px] border-[2.778px] border-[#316bb6] rounded-xl flex items-center justify-center py-6 sm:py-8 lg:py-[12px] px-4 sm:px-6 lg:px-[15px]">
@@ -601,10 +560,7 @@ function Homepage() {
                     className="w-[140px] sm:w-[160px] lg:w-[174px] h-auto mb-6 transition-all duration-300 hover:scale-105"
                   />
                   <p className="text-white/70 text-sm sm:text-base lg:text-[16px] font-normal leading-6 sm:leading-7 lg:leading-[24px] mb-6">
-                    Especialistas em transformar ideias em realidade no universo
-                    Web3. Oferecemos soluções completas que integram tecnologia,
-                    jurídico e marketing para criar produtos escaláveis no
-                    ecossistema descentralizado.
+                    {t("footer.company_description")}
                   </p>
 
                   {/* Contact Button */}
@@ -626,7 +582,7 @@ function Homepage() {
                         >
                           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488" />
                         </svg>
-                        Entre em contato
+                        {t("footer.contact_button")}
                       </span>
                     </button>
                   </div>
@@ -635,7 +591,7 @@ function Homepage() {
                 {/* Services */}
                 <div>
                   <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
-                    Nossos Produtos
+                    {t("footer.products_title")}
                   </h3>
                   <ul className="space-y-3">
                     <li>
@@ -704,7 +660,7 @@ function Homepage() {
                 {/* Social & Links */}
                 <div className="flex flex-col">
                   <h3 className="text-white text-lg font-semibold mb-4 lg:mb-6">
-                    Conecte-se
+                    {t("footer.connect_title")}
                   </h3>
 
                   {/* Social Media Links */}
@@ -756,7 +712,7 @@ function Homepage() {
               <div className="border-t border-white/10 pt-6 lg:pt-8">
                 <div className="text-center">
                   <p className="text-white/50 text-sm">
-                    © 2024 HastyDev. Todos os direitos reservados.
+                    {t("footer.copyright")}
                   </p>
                 </div>
               </div>

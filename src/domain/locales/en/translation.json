@@ -1,0 +1,125 @@
+{
+  "header": {
+    "links": {
+      "produto": "Product",
+      "plataforma": "Platform",
+      "sobre": "About"
+    },
+    "language": "English (US)",
+    "contact_button": "Contact us"
+  },
+  "hero": {
+    "title": "Incorporation Kits for",
+    "rotating_texts": {
+      "p2p_core": "P2P Core",
+      "pay_engine": "Pay Engine",
+      "branding": "Branding",
+      "legal": "Legal"
+    },
+    "description": "Hastydev transforms your idea into reality in the crypto universe, with a complete package that combines legal, marketing and technology.\n\nWhether you're an investor or builder, we structure your legal entity in a strategic jurisdiction, ensuring security and compliance to undertake in the decentralized market.\n\nStart building with confidence — from anywhere in the world, with the support you need to grow in Web3.",
+    "contact_cta": "Contact us"
+  },
+  "products": {
+    "section_title": "Infinite possibilities",
+    "section_subtitle": "Products for all your needs",
+    "labels": {
+      "objetivo": "Objective:",
+      "operacao": "Operation:",
+      "desenvolvedor": "Developer:",
+      "tempo": "Timeline:"
+    },
+    "hastyp2p_core": {
+      "name": "HastyP2P Core",
+      "title": "HastyP2P",
+      "title_accent": "Core",
+      "objetivo": "Automate your P2P operation with smart contracts, eliminating intermediaries and reducing risks like MEDs.",
+      "operacao": "White-label and modular solution, adaptable to your business, with liquidity, security and orchestrated smart contracts.",
+      "desenvolvedor": "Hastydev's Web3 team, specialist in crypto automation, wallet integration and secure backends.",
+      "tempo": "Countdown, collaborative group and network of professionals for agile execution aligned with your scope."
+    },
+    "hastypay_engine": {
+      "name": "HastyPay Engine",
+      "title": "HastyPay",
+      "title_accent": "Engine",
+      "objetivo": "Crypto payment processing in USDT, BTC and more, with security, compliance and modern checkout experience.",
+      "operacao": "White-label system with QR code, on-chain confirmation and full integration to customer payment flow.",
+      "desenvolvedor": "Hastydev's experienced team, focused on Web3 gateways and decentralized payment APIs.",
+      "tempo": "Project with clear timeline, active group with client and devs, and real-time communication for decisions."
+    },
+    "hastylegal_guide": {
+      "name": "HastyLegal Guide",
+      "title": "HastyLegal",
+      "title_accent": "Guide",
+      "objetivo": "Choose the best jurisdiction for your crypto structure with personalized legal, tax and regulatory basis.",
+      "operacao": "Immersion in the client's model, with custom deliveries for corporate format and legal requirements.",
+      "desenvolvedor": "Partner legal team, specialized in crypto and offshore structures with Web3 compliance track record.",
+      "tempo": "Short phases with founder and lawyer groups, enabling quick adjustments and exchanges between projects."
+    },
+    "hastybrand_studio": {
+      "name": "HastyBrand Studio",
+      "title": "HastyBrand",
+      "title_accent": "Studio",
+      "objetivo": "Create a unique visual identity for Web3, with mascots, bold colors and UX that guides the user.",
+      "operacao": "Includes complete brandbook, visual assets and funnel improvements with focus on crypto digital highlight.",
+      "desenvolvedor": "Hastydev's creative team, integrated with product and tech, with experience in Web3 and DeFi brands.",
+      "tempo": "Visual milestones with continuous validations, collaborative group and exchange with other creative projects in the sector."
+    }
+  },
+  "why_hastydev": {
+    "title": "Why HastyDev?",
+    "card1": {
+      "title": "End-to-end technology for the Web3 universe",
+      "description": "Hastydev delivers complete solutions — from smart contracts to your brand design. We combine engineering, legal, UX and crypto in one flow, ready to transform ideas into scalable products in the decentralized ecosystem."
+    },
+    "card2": {
+      "title": "Execution speed with surgical precision",
+      "description": "In the Web3 market, moving fast is essential. Our teams work with coordinated deliveries, visible timelines and active project groups to ensure you receive exactly what you need, on time and without rework. All with the agility that technology companies demand."
+    },
+    "card3": {
+      "title": "Direct connection with the real crypto ecosystem",
+      "description": "More than service providers, we are an active part of the Web3 market. When you join Hastydev, you access a collaborative environment with devs, lawyers, designers and founders — creating instant and strategic networking to grow based on real experience."
+    }
+  },
+  "dashboard": {
+    "title": "One panel for all your activities",
+    "card1": {
+      "title": "Create your Coupons for Promotions",
+      "description": "Generate personalized coupons directly on the platform and increase your conversions with smart incentives. Crypto promotions in the palm of your hand."
+    },
+    "card2": {
+      "title": "Track Performance in Real Time",
+      "description": "View conversions, sales volume and coupon usage with total transparency. More control, less guesswork."
+    },
+    "card3": {
+      "title": "Dashboard made for the Merchant",
+      "description": "Everything you need to manage payments and promotions in one place. Easy to use, ready to scale."
+    }
+  },
+  "testimonials": {
+    "title": "What our users say about us",
+    "testimonial1": {
+      "text": "\"Hastydev understood exactly what we needed and was very agile in delivering everything working. The automation with smart contracts using DEPIX improved our conversions and removed several operational barriers we had. The reports made everything clearer for our partners and influencers, which greatly improved the relationship with them. It was a relief to count on such a technical and straight-to-the-point team.\"",
+      "author": "— Alfredp2p Team"
+    },
+    "testimonial2": {
+      "text": "\"We were impressed with the results of Alfred P2P after the DEPIX integration and automation done by Hastydev. The significant reduction in MEDs was a major advance, but what really caught our attention was the increase in transaction volume internally. This not only improved operational efficiency, but also became a milestone in the evolution of P2P decentralization. Hastydev's work was fundamental to bring more security, scalability and trust to the ecosystem.\"",
+      "author": "— Eulen Team"
+    },
+    "testimonial3": {
+      "text": "\"It was impressive to see how a basic solution, which just needed to be structured correctly, transformed into an operational crypto exchange system that put us ahead of the market. Hastydev made it happen agily and precisely. Additionally, what really stood out was the continuous support and consulting we received throughout the process. While we evolved the project, we managed to operationalize and profit at the same time, which made the experience even more valuable. We are very satisfied with the positive impact Hastydev had on our business.\"",
+      "author": "— pagueBit Team"
+    }
+  },
+  "clients": {
+    "title": "Our clients"
+  },
+  "footer": {
+    "company_description": "Specialists in transforming ideas into reality in the Web3 universe. We offer complete solutions that integrate technology, legal and marketing to create scalable products in the decentralized ecosystem.",
+    "products_title": "Our Products",
+    "connect_title": "Connect",
+    "social_instagram": "Follow on Instagram",
+    "social_linkedin": "Connect on LinkedIn",
+    "copyright": "© 2024 HastyDev. All rights reserved.",
+    "contact_button": "Contact us"
+  }
+}

@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const texts = ["P2P Core", "Pay Engine", "Branding", "Legal"];
+const getTexts = (t: any) => [
+  t("hero.rotating_texts.p2p_core"),
+  t("hero.rotating_texts.pay_engine"),
+  t("hero.rotating_texts.branding"),
+  t("hero.rotating_texts.legal"),
+];
 
 function RotatingText() {
+  const { t } = useTranslation();
+  const texts = getTexts(t);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -37,7 +45,7 @@ function RotatingText() {
     }
 
     return () => clearTimeout(timeoutId);
-  }, [displayText, isTyping, currentIndex]);
+  }, [displayText, isTyping, currentIndex, texts]);
 
   // Cursor blinking effect
   useEffect(() => {
