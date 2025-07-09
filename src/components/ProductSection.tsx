@@ -102,7 +102,12 @@ function ProductSection() {
           <img
             src={activeProduct.image}
             alt={t(`products.${activeProduct.key}.name`)}
-            className="w-full max-w-[500px] lg:max-w-[600px] h-auto rounded-lg object-contain transition-all duration-500 ease-in-out"
+            className={`w-full h-auto rounded-lg object-contain transition-all duration-500 ease-in-out ${
+              activeProduct.key === "hastypay_engine" ||
+              activeProduct.key === "hastylegal_guide"
+                ? "max-w-[300px] lg:max-w-[400px]"
+                : "max-w-[500px] lg:max-w-[600px]"
+            }`}
           />
         </div>
       </div>
